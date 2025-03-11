@@ -29,16 +29,16 @@ class Task {
 class List {
 	constructor(name) {
 		this.name = name;
-		this.tasks = [];
+		this.taskList = [];
 	}
 
 	addTask(task) {
-		(this.tasks).push(task);
+		(this.taskList).push(task);
 	}
 }
 
 window.addEventListener("DOMContentLoaded", function() {
-
+	
 	console.log(testTasks);
 	const thing = new Task("Pet my dog", "Make sure to do this in the sunshine", "03-10-2025", "low", "no notes");
 	const project = new List("Household chores");

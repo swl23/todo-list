@@ -1,7 +1,7 @@
 export const testTasks = [
 	{
 		project: "Random",
-		tasks: [
+		taskList: [
 			{
 				title: "Pick up the kids from school",
 				description: "Make sure Danny remembers his saxophone reeds",
@@ -20,7 +20,7 @@ export const testTasks = [
 	},
 	{
 		project: "Home improvement",
-		tasks: [
+		taskList: [
 			{
 				title: "Patch holes in office ceiling",
 				description: "Don't forget to turn off the power before messing with the cable to the overhead light",
