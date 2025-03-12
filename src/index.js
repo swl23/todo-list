@@ -6,10 +6,17 @@ console.log("Running a webpack test")
 const Clipboard = () => {
 	let contents = [];
 
+	const getContents = () => contents;
+
 	const addList = (list) => {
 		contents.push(list);
 		return contents;
-	}
+	};
+
+	return {
+		getContents,
+		addList
+	};
 }
 
 class Task {
@@ -19,22 +26,26 @@ class Task {
 		this.dueDate = dueDate;
 		this.priority = priority;
 		this.notes = notes;
-	}
+	};
 	
 	update(element, newValue) {
 		this[element] = newValue;
-	}
+	};
 }
 
 class List {
 	constructor(name) {
 		this.name = name;
 		this.taskList = [];
-	}
+	};
 
 	addTask(task) {
 		(this.taskList).push(task);
-	}
+	};
+
+	removeTask(index) {
+		(this.taskList).splice(Number(index), 1);
+	};
 }
 
 window.addEventListener("DOMContentLoaded", function() {
